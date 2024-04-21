@@ -22,13 +22,14 @@ const Index = () => {
   return (
     <Layout dark>
       <Home />
+      <Blog />
       <About />
       <Skills />
       <Portfolio />
       <Service dark />
       <Resume />
       <Testimonial />
-      <Blog />
+      {/* <Blog /> */}
       <Counter />
       <Contact />
     </Layout>
