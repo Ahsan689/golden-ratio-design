@@ -69,20 +69,20 @@ const Portfolio = () => {
                 </a>
               </li>
               <li>
-                <a onClick={handleFilterKeyChange("vimeo")}>Vimeo</a>
+                <a onClick={handleFilterKeyChange("vimeo")}>Residential</a>
               </li>
               <li>
-                <a onClick={handleFilterKeyChange("youtube")}>Youtube</a>
+                <a onClick={handleFilterKeyChange("youtube")}>Interior</a>
               </li>
               <li>
                 <a onClick={handleFilterKeyChange("soundcloud")}>Soundcloud</a>
               </li>
-              <li>
+              {/* <li>
                 <a onClick={handleFilterKeyChange("image")}>Image</a>
               </li>
               <li>
                 <a onClick={handleFilterKeyChange("detail")}>Detail</a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="portfolio_list">
@@ -90,8 +90,8 @@ const Portfolio = () => {
               <li className="filter-item vimeo">
                 <div className="list_inner">
                   <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/portfolio/1.jpg" />
+                    <video src="videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4" style={{width:"100%", height:"285px"}}  autoPlay muted loop />
+                    {/* <div className="main" data-img-url="img/portfolio/1.jpg" /> */}
                   </div>
                   <div className="overlay" />
                   {vimeo}
@@ -109,8 +109,8 @@ const Portfolio = () => {
               <li className="filter-item youtube">
                 <div className="list_inner">
                   <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/portfolio/2.jpg" />
+                    <video src="videos/INTERIOR BACK CARD ANIMATION.mp4" style={{width:"100%", height:"285px"}} autoPlay muted loop />
+                    {/* <div className="main" data-img-url="img/portfolio/2.jpg" /> */}
                   </div>
                   <div className="overlay" />
                   {youtube}
@@ -128,8 +128,10 @@ const Portfolio = () => {
               <li className="filter-item soundcloud">
                 <div className="list_inner">
                   <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/portfolio/3.jpg" />
+                    {/* <img src="img/thumbs/1-1.jpg" alt="aali image" /> */}
+                    <video src="videos/INTERIOR CARD BACK ANIMATION VIDEO.mp4" style={{width:"100%", height:"285px"}} autoPlay muted loop />
+
+                    {/* <div className="main" data-img-url="img/portfolio/3.jpg" /> */}
                   </div>
                   <div className="overlay" />
                   {soundcloud}
@@ -144,7 +146,7 @@ const Portfolio = () => {
                   />
                 </div>
               </li>
-              <li className="filter-item detail">
+              {/* <li className="filter-item detail">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
@@ -275,8 +277,8 @@ const Portfolio = () => {
                     </ModalBox>
                   </div>
                 </div>
-              </li>
-              <li className="filter-item image">
+              </li> */}
+              {/* <li className="filter-item image">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
@@ -294,8 +296,8 @@ const Portfolio = () => {
                     onClick={() => showPopup("image", "img/portfolio/5.jpg")}
                   />
                 </div>
-              </li>
-              <li className="filter-item detail">
+              </li> */}
+              {/* <li className="filter-item detail">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
@@ -426,7 +428,7 @@ const Portfolio = () => {
                     </ModalBox>
                   </div>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

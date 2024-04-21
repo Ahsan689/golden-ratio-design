@@ -1,29 +1,49 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { fb, insta, msg, twitter } from "../svgImage";
 import { parallax } from "../utilits";
+// import Video from "../videos/Main title page animation with logos.mp4"
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { BsTiktok } from "react-icons/bs";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Home = () => {
   const [text, setText] = useState(1);
+  const videoref = useRef()
   useEffect(() => {
     // parallax();
+    // videoref.current.Play()
     const interval = setInterval(() => {
       setText(text < 3 ? text + 1 : 1);
     }, 5000);
     return () => clearInterval(interval);
   });
+
+//  useEffect(() => {
+//   if(videoref.current){
+//     videoref.current.addEventListener('loadeddata', () => {
+//       videoref.current?.play();
+//     });
+    
+//   }
+//   }, [])
   return (
     <div className="aali_tm_section " id="home">
       <div className="aali_tm_hero">
-        <div className="container">
+      <video  style={{width:"100%",height:"670px"}}  src={"videos/Main-title-page-animation-with-logos.mp4"} autoPlay muted loop />
+
+        {/* <div className="container">
           <div className="hero_inner">
             <div className="content">
+
               <span className="hello">Hello, {`I'm`}</span>
               <h3 className="name">Aali</h3>
               <div className="job">
                 <span className="cd-headline rotate-1">
                   {" "}
-                  {/* ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  */}
-                  {/* <span className="blc">Creative </span>
+                  <span className="blc">Creative </span>
                   <span className="cd-words-wrapper">
                     <b className={text === 1 ? "is-visible" : "is-hidden"}>
                       Designer
@@ -34,7 +54,7 @@ const Home = () => {
                     <b className={text === 3 ? "is-visible" : "is-hidden"}>
                       Freelancer
                     </b>
-                  </span> */}
+                  </span>
                 </span>
               </div>
               <div className="hero_buttons">
@@ -90,7 +110,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="avatar parallax" style={{ position: "absolute" }}>
+            <div className="avatar parallax" style={{ position: "absolute" }}>
               <div className="main">
                 <img
                   src="img/hero/1.png"
@@ -117,27 +137,34 @@ const Home = () => {
               <h3 className="stroke_text">
                 <span>Aali</span>
               </h3>
-            </div> */}
+            </div>
           </div>
-        </div>
+        </div> */}
         <div className="socials">
           <ul>
             <li>
-              <a href="#">{fb}</a>
+              <a href="#"><FaFacebook/></a>
             </li>
             <li>
-              <a href="#">{twitter}</a>
+              <a href="#"><FaInstagram/></a>
             </li>
             <li>
-              <a href="#">{insta}</a>
+              <a href="#"><FaLinkedinIn/></a>
+            </li>
+            <li>
+              <a href="#"><FaWhatsapp/></a>
+            </li>
+            <li>
+              <a href="#"><BsTiktok/></a>
             </li>
           </ul>
         </div>
-        <div className="hero_mail">
+      
+        {/* <div className="hero_mail">
           <a className="line_anim" href="#">
             hello@aali.com
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
