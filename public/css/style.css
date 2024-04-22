@@ -459,7 +459,8 @@ h6 { font-size: 16px; }
 
 .aali_tm_hero{
 	width: 100%;
-	height: 100vh;
+	/* height: 100vh; */
+	height: auto;
 	position: relative;
 	float: left;
 	clear: both;
@@ -748,11 +749,11 @@ h6 { font-size: 16px; }
 .aali_tm_hero .socials{
 	/* background-color: red; */
 	position: absolute;
-	top: 25%;
+	top: 330px;
 	transform: translateY(-50%);
-	transform: translateX(96%);
+	/* transform: translateX(96%); */
 	/* left: 0px; */
-	right: 0;
+	right: 25px;
 }
 .aali_tm_hero .socials ul{
 	margin: 0px 0px 15px 0px;
@@ -2936,7 +2937,7 @@ body.intro .loader_line:after{
 	.aali_tm_hero .simple_button{margin-left: 28px;}
 	.aali_tm_hero .hero_buttons{margin-top: 25px;margin-bottom: 45px;}
 	.aali_tm_button a .svg{width: 16px;height: 16px;}
-	.aali_tm_hero .socials{left: 30px ; transform: translateX(95%);}
+	/* .aali_tm_hero .socials{left: 30px ; } */
 	.aali_tm_hero .socials ul .svg{width: 20px;height: 20px;}
 	.aali_tm_hero .socials ul li{margin-bottom: 20px;}
 	.aali_tm_hero .hero_mail{left: 30px;bottom: 20px;}
@@ -3026,7 +3027,7 @@ body.intro .loader_line:after{
 		-webkit-transform: translateY(-50%);
 		-moz-transform: translateY(-50%);
 		transform: translateY(-50%);
-		-webkit-transform: translateX(96%);
+		/* -webkit-transform: translateX(96%); */
 		/* -moz-transform: translateX(96%); */
 		/* transform: translateX(0%); */
 		/* left: 0px; */
