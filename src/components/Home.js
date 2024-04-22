@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="aali_tm_section " id="home">
       <div className="aali_tm_hero">
-      <video  style={{width:"100%",height:"670px"}}  src={"videos/Main-title-page-animation-with-logos.mp4"} autoPlay muted loop />
+      <video  style={{width:"100%",height:"auto"}}  src={"videos/Main-title-page-animation-with-logos.mp4"} autoPlay muted loop />
 
         {/* <div className="container">
           <div className="hero_inner">
