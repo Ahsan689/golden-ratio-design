@@ -27,43 +27,45 @@ const Popup = ({ close, content }) => {
   const { src, name } = content;
 
   const findContent = (name) => {
-    switch (name) {
-      case "vimeo":
-        return (
-          <iframe
-            className="mfp-iframe"
-            src={`//player.vimeo.com/video/${src}?autoplay=1`}
-            frameBorder={0}
-            allowFullScreen
-          />
-        );
-      case "soundcloud":
-        return (
-          <iframe
-            className="mfp-iframe"
-            src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${
-              src ? src : "471954807"
-            }&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}
-            frameBorder={0}
-            allowFullScreen
-          />
-        );
+    // switch (name) {
+    //   case "vimeo":
+    //     return (
+    //       <iframe
+    //         className="mfp-iframe"
+    //         src={`//player.vimeo.com/video/${src}?autoplay=1`}
+    //         frameBorder={0}
+    //         allowFullScreen
+    //       />
+    //     );
+    //   case "soundcloud":
+    //     return (
+    //       <iframe
+    //         className="mfp-iframe"
+    //         src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${
+    //           src ? src : "471954807"
+    //         }&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}
+    //         frameBorder={0}
+    //         allowFullScreen
+    //       />
+    //     );
 
-      case "image":
-        return <img className="mfp-img" src={src} />;
+    //   case "image":
+    //     return <img className="mfp-img" src={src} />;
 
-      default:
-        return (
-          <iframe
-            className="mfp-iframe"
-            src={`//www.youtube.com/embed/${
-              src ? src : "FgA6MwKmmc0"
-            }?autoplay=1`}
-            frameBorder={0}
-            allowFullScreen
-          />
-        );
-    }
+    //   default:
+    //     return (
+    //       <iframe
+    //         className="mfp-iframe"
+    //         src={`//www.youtube.com/embed/${
+    //           src ? src : "FgA6MwKmmc0"
+    //         }?autoplay=1`}
+    //         frameBorder={0}
+    //         allowFullScreen
+    //       />
+    //     );
+    // }
+
+
   };
 
   return (
@@ -91,6 +93,10 @@ const Popup = ({ close, content }) => {
               </button>
 
               {findContent(name)}
+
+              
+
+
             </div>
           </div>
           <div className="mfp-preloader">Loading...</div>

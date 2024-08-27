@@ -1,5 +1,7 @@
 import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/dist/client/router";
+import Link from 'next/link'
 import {
   fb,
   insta,
@@ -13,31 +15,72 @@ import {
 import { aTagClick, dataImage } from "../utilits";
 import ModalBox from "./ModalBox";
 import Popup from "./Popup";
+import Carousel from "../components/Carousel";
+import Modal from "../components/ModalNew";
+import CloseButton from "./CloseButton";
+
+const images = [
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/001.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/002.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/003.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/004.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/005.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/006.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/007.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/008_1.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/009.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0010.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0011.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0012.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0013.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0014.png",
+];
 
 const Portfolio = () => {
+
+  const router = useRouter()
+  console.log("router",router);
+  console.log("Link",Link);
   // Isotope
   const isotope = useRef();
-  const [filterKey, setFilterKey] = useState("*");
-  useEffect(() => {
-    setTimeout(() => {
-      isotope.current = new Isotope(".gallery_zoom", {
-        itemSelector: ".filter-item",
-        layoutMode: "fitRows",
-      });
-    }, 300);
-    return () => isotope.current.destroy();
-  }, []);
-  useEffect(() => {
-    dataImage();
-    aTagClick();
-    if (isotope.current) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: `*` })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
-    }
-  }, [filterKey]);
-  const handleFilterKeyChange = (key) => () => {
+  const [filterKey, setFilterKey] = useState("residential");
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     isotope.current = new Isotope(".gallery_zoom", {  
+  //       itemSelector: ".filter-item",
+  //       layoutMode: "fitRows",
+  //     });
+  //     // isotope.current.arrange({ filter: '.residential' });
+  //   }, 300);
+  //   return () => isotope.current.destroy();
+  // }, []);
+  
+  // useEffect(() => {
+  //   // dataImage();
+  //   // aTagClick();
+  //   if (isotope.current) {
+  //     console.log("isotope.current",isotope.current);
+  //     console.log("filterKey",filterKey);
+  //     // filterKey === "*"
+  //     //   ? isotope.current.arrange({ filter: `*` })
+  //     //   : isotope.current.arrange({ filter: `.${filterKey}` });
+  //     isotope.current.arrange({ filter: `.${filterKey}` });
+  //     // return () => isotope.current.destroy();
+  //   }
+  // }, [filterKey]);
+  
+  const handleFilterKeyChange = (key) => {
     setFilterKey(key);
+
+     // Trigger the zoom-out animation before filtering
+     const items = document.querySelectorAll('.filter-item');
+     items.forEach(item => {
+       if (!item.classList.contains(key)) {
+         item.classList.add('is-hidden');
+       } else {
+         item.classList.remove('is-hidden');
+       }
+     });
   };
   // popup
   const [video, setVideo] = useState(false);
@@ -48,9 +91,55 @@ const Portfolio = () => {
   };
   // Model Box
   const [modal, setModal] = useState(0);
+  const hidden = (value) => {
+    console.log(value, "hidden....");
+    value === modal ? "" : "news_hidden_details";
+  };
+
+  console.log("modal", modal);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleNavigate =() => {
+    router.push("/portfolio")
+  }
+
+  const portfolioItems = [
+    {
+      category: 'residential',
+      videoSrc: 'videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4',
+      title: 'Saudi Arabia Residential',
+    },
+    {
+      category: 'residential',
+      videoSrc: 'videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4',
+      title: 'Living Room Residential',
+    },
+    {
+      category: 'residential',
+      videoSrc: 'videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4',
+      title: 'Dining Area Residential',
+    },
+    {
+      category: 'interior',
+      videoSrc: 'videos/INTERIOR BACK CARD ANIMATION.mp4',
+      title: 'Ariel View Appartment',
+    },
+    {
+      category: 'commercial',
+      videoSrc: 'videos/INTERIOR CARD BACK ANIMATION VIDEO.mp4',
+      title: 'Lavish Restaurant',
+    },
+  ];
+
+  const filteredItems = portfolioItems.filter(item => item.category === filterKey);
+
+
+  // console.log("filterKey:",filterKey);
   return (
     <div className="aali_tm_section help" id="portfolio">
-      {video && <Popup close={setVideo} content={videoContent} />}
+      {/* {video && <Popup close={setVideo} content={videoContent} />} */}
+
       <div className="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
         <div className="container">
           <div
@@ -58,65 +147,246 @@ const Portfolio = () => {
             data-text-align="center"
             data-color="light"
           >
-            <span>Selected works</span>
+            <span className="text-black-500">Selected works</span>
             <h3>Check my portfolio</h3>
           </div>
           <div className="portfolio_filter">
             <ul>
-              <li>
-                <a onClick={handleFilterKeyChange("*")} className="current">
+              {/* <li>
+                <a onClick={()=> handleFilterKeyChange("*")} className="current">
                   All
                 </a>
+              </li> */}
+              <li>
+                <a className="current" onClick={()=>handleFilterKeyChange("residential")} style={{color:filterKey==="residential"?'yellow':""}}>Residential</a>
               </li>
               <li>
-                <a onClick={handleFilterKeyChange("vimeo")}>Vimeo</a>
+                <a onClick={ ()=>handleFilterKeyChange("interior")}style={{color:filterKey==="interior"?'yellow':""}}>Interior</a>
               </li>
               <li>
-                <a onClick={handleFilterKeyChange("youtube")}>Youtube</a>
+                <a onClick={()=>handleFilterKeyChange("commercial")}style={{color:filterKey==="commercial"?'yellow':""}}>Commercial</a>
               </li>
-              <li>
-                <a onClick={handleFilterKeyChange("soundcloud")}>Soundcloud</a>
-              </li>
-              <li>
+              {/* <li>
                 <a onClick={handleFilterKeyChange("image")}>Image</a>
               </li>
               <li>
                 <a onClick={handleFilterKeyChange("detail")}>Detail</a>
-              </li>
+              </li> */}
             </ul>
           </div>
+
           <div className="portfolio_list">
             <ul className="gallery_zoom">
-              <li className="filter-item vimeo">
+          
+            {/* {filteredItems.map((item, index) => (
+              <li key={index} className={`filter-item ${item.category}`}>
                 <div className="list_inner">
                   <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/portfolio/1.jpg" />
+                    <video
+                      src={item.videoSrc}
+                      style={{ width: '100%', height: '285px' }}
+                      autoPlay
+                      muted
+                      loop
+                    />
                   </div>
                   <div className="overlay" />
-                  {vimeo}
                   <div className="details">
-                    <span>Vimeo</span>
-                    <h3>New Laptop</h3>
+                    <span>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
+                    <h3>{item.title}</h3>
                   </div>
                   <a
-                    className="aali_tm_full_link popup-vimeo"
+                    className="aali_tm_full_link"
                     href="#"
-                    onClick={() => showPopup("vimeo", "337293658")}
+                    // onClick={() => setShowModal(true)}
+                    onClick={() => setModal(1)}
                   />
                 </div>
+             
               </li>
-              <li className="filter-item youtube">
+            ))} */}
+              <li className="filter-item residential">
                 <div className="list_inner">
                   <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/portfolio/2.jpg" />
+                    <video
+                      src="videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4"
+                      style={{ width: "100%", height: "285px" }}
+                      autoPlay
+                      muted
+                      loop
+                    />
                   </div>
                   <div className="overlay" />
-                  {youtube}
                   <div className="details">
-                    <span>Youtube</span>
-                    <h3>Best Phone</h3>
+                    <h3>Residential</h3>
+                    <h6>Saudi Arabia Residential</h6>
+                  
+                  </div>
+                  <a
+                    className="aali_tm_full_link"
+                    // href="/portfolio"
+                    onClick={() => setModal(1)}
+
+                  />
+                </div>
+               
+              </li>
+              <div className={modal === 1 ? "" : "hidden_content"}>
+                  <ModalBox close={setModal}>
+                    <div className="service_popup_informations">
+                      <Carousel images={images} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                       
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={images} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                      
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={images} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                        <p>
+                          In today’s digital world, your website is the first
+                          interaction consumers have with your business.{" "}
+                          {`That's`}
+                          why almost 95 percent of a user’s first impression
+                          relates to web design. It’s also why web design
+                          services can have an immense impact on your company’s
+                          bottom line.
+                        </p>
+                     
+                      </div>
+                    </div>
+                  </ModalBox>
+                </div>
+              {/* <li className="filter-item residential">
+                <div className="list_inner">
+                  <div className="image">
+                    <video
+                      src="videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4"
+                      style={{ width: "100%", height: "285px" }}
+                      autoPlay
+                      muted
+                      loop
+                    />
+                  </div>
+                  <div className="overlay" />
+                  <div className="details">
+                    <h3>Residential</h3>
+                    <h6>Living Room Residential</h6>
+                  </div>
+                  <a
+                    className="aali_tm_full_link"
+                    href="#"
+                    onClick={() => setShowModal(true)}
+                  />
+
+                
+                </div>
+              </li>
+              <li className="filter-item residential">
+                <div className="list_inner">
+                  <div className="image">
+                    <video
+                      src="videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4"
+                      style={{ width: "100%", height: "285px" }}
+                      autoPlay
+                      muted
+                      loop
+                    />
+                  </div>
+                  <div className="overlay" />
+                  <div className="details">
+                    <h3>Residential</h3>
+                    <h6>Dining Area Residential</h6>
+                  </div>
+                  <a
+                    className="aali_tm_full_link"
+                    href="#"
+                    onClick={() => setShowModal(true)}
+                  />
+
+                  
+                </div>
+              </li>
+              <li className="filter-item interior">
+                <div className="list_inner">
+                  <div className="image">
+                    <video
+                      src="videos/INTERIOR BACK CARD ANIMATION.mp4"
+                      style={{ width: "100%", height: "285px" }}
+                      autoPlay
+                      muted
+                      loop
+                    />
+                  </div>
+                  <div className="overlay" />
+                  <div className="details">
+                    <h3>Interior</h3>
+                    <h6>Ariel View Appartment</h6>
                   </div>
                   <a
                     className="aali_tm_full_link popup-youtube"
@@ -125,26 +395,32 @@ const Portfolio = () => {
                   />
                 </div>
               </li>
-              <li className="filter-item soundcloud">
+              <li className="filter-item commercial">
                 <div className="list_inner">
                   <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/portfolio/3.jpg" />
+                    <video
+                      src="videos/INTERIOR CARD BACK ANIMATION VIDEO.mp4"
+                      style={{ width: "100%", height: "285px" }}
+                      autoPlay
+                      muted
+                      loop
+                    />
+
                   </div>
                   <div className="overlay" />
-                  {soundcloud}
                   <div className="details">
-                    <span>Soundcloud</span>
-                    <h3>Smart Headphone</h3>
+                    <h3>Commercial</h3>
+                    <h6>Lavish Restaurant</h6>
                   </div>
                   <a
-                    className="aali_tm_full_link soundcloude_link mfp-iframe audio"
+                    className="aali_tm_full_link soundcloude_link"
                     href="#"
-                    onClick={() => showPopup("soundcloud", "471954807")}
+                    // onClick={() => showPopup("soundcloud", "471954807")}
                   />
                 </div>
-              </li>
-              <li className="filter-item detail">
+              </li> */}
+
+              {/* <li className="filter-item detail">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
@@ -275,8 +551,8 @@ const Portfolio = () => {
                     </ModalBox>
                   </div>
                 </div>
-              </li>
-              <li className="filter-item image">
+              </li> */}
+              {/* <li className="filter-item image">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
@@ -294,8 +570,8 @@ const Portfolio = () => {
                     onClick={() => showPopup("image", "img/portfolio/5.jpg")}
                   />
                 </div>
-              </li>
-              <li className="filter-item detail">
+              </li> */}
+              {/* <li className="filter-item detail">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
@@ -426,11 +702,17 @@ const Portfolio = () => {
                     </ModalBox>
                   </div>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
       </div>
+     
+
+      <Modal show={showModal} onClose={() => setShowModal(false)}>
+        <CloseButton onClose={() => setShowModal(false)}/>
+        <Carousel images={images} />
+      </Modal>
     </div>
   );
 };

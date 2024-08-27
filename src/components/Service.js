@@ -11,6 +11,7 @@ import {
   webDark,
 } from "../svgImage";
 import ModalBox from "./ModalBox";
+import Carousel from "./Carousel";
 
 const Service = ({ dark }) => {
   const [modal, setModal] = useState(0);
@@ -24,6 +25,25 @@ const Service = ({ dark }) => {
       transition: true,
     });
   }, []);
+
+  const images = [
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/001.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/002.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/003.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/004.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/005.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/006.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/007.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/008_1.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/009.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0010.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0011.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0012.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0013.png",
+  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0014.png",
+];
+
+
   return (
     <div className="aali_tm_section" id="service">
       <div className="aali_tm_service">
@@ -87,13 +107,66 @@ const Service = ({ dark }) => {
                 <div className={hidden(1)}>
                   <ModalBox close={setModal}>
                     <div className="service_popup_informations">
-                      <div className="image">
+                      <Carousel images={images} />
+                      {/* <div className="image">
                         <img src="img/thumbs/4-2.jpg" alt="" />
                         <div
                           className="main"
                           data-img-url="img/service/1.jpg"
                         />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
                       </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                       
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={images} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                      
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={images} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
                       <div className="main_title">
                         <h3>Video Production</h3>
                         <span className="price">
@@ -117,15 +190,7 @@ const Service = ({ dark }) => {
                           services can have an immense impact on your company’s
                           bottom line.
                         </p>
-                        <p>
-                          That’s why more companies are not only reevaluating
-                          their website’s design but also partnering with Kura,
-                          the web design agency that’s driven more than $2.4
-                          billion in revenue for its clients. With over 50 web
-                          design awards under our belt, {`we're`} confident we
-                          can design a custom website that drives sales for your
-                          unique business.
-                        </p>
+                     
                       </div>
                     </div>
                   </ModalBox>
@@ -167,13 +232,14 @@ const Service = ({ dark }) => {
                 <div className={hidden(2)}>
                   <ModalBox close={setModal}>
                     <div className="service_popup_informations">
-                      <div className="image">
+                      {/* <div className="image">
                         <img src="img/thumbs/4-2.jpg" alt="aali image" />
                         <div
                           className="main"
                           data-img-url="img/service/3.jpg"
                         />
-                      </div>
+                      </div> */}
+                      <Carousel images={images} />
                       <div className="main_title">
                         <h3>Brand Identity</h3>
                         <span className="price">

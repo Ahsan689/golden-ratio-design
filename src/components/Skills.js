@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <div className="aali_tm_section" id="portfolio">
       <div className="aali_tm_skills">
-        <div className="container">
+        {/* <div className="container">
           <div className="skills_inner">
             <div className="left wow fadeInLeft" data-wow-duration="1s">
               <div
@@ -66,7 +66,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <span
           className="border moving_effect"
           data-direction="x"

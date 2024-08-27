@@ -49,14 +49,35 @@ img.mfp-img {
 }
 
 .modalCloseSvg {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 @media (max-width: 768px) {
   .modalCloseSvg {
     width: 30px;
     height: 30px;
   }
+  .modalContent {
+    background: #4b4b4b !important; 
+    padding: 20px !important;
+    border-radius: 8px !important;
+    position: relative !important;
+    max-width: 90% !important;
+    max-height: 50% !important;
+    overflow-y: auto !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+.slide img {
+  width: 100% !important;
+  height: 270px !important;
+  display: block !important;
+}
+.carousel {
+  position: relative !important;
+  width: 100% !important;
+  height: 320px !important;
+  overflow: hidden !important;
+}
 }
 
 .aali_tm_testimonials .swiper {
