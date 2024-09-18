@@ -40,13 +40,10 @@ const About = () => {
               data-wow-delay="0.2s"
             >
               <p>
-                Hi! My name is Aali Walker. I am UI/UX designer, and {`I'm`}{" "}
-                very passionate and dedicated to my work.
+              At Golden Ratio Design, we are dedicated to delivering excellence across every project, whether it’s residential, commercial, corporate, or hospitality. Our team of passionate professionals is committed to redefining the standards of design and craftsmanship, pushing the boundaries of what is possible.
               </p>
               <p>
-                With 20 years experience as a professional graphic designer and
-                web developer, I have acquired the skills and knowledge
-                necessary to make your project a success.
+              Our work is beautifully showcased at Golden Ratio Design, where stunning interiors meet bespoke artisanal furniture. Complemented by our dynamic Design Studio and an advanced three-storey furniture factory, Golden Ratio Design is more than a brand; it's a celebration of creativity and a relentless pursuit of perfection. We pride ourselves on maintaining the highest standards of quality and exceptional client service, reflecting the very best of the human spirit in every detail
               </p>
             </div>
             <div

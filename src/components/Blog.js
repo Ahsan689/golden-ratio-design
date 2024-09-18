@@ -32,16 +32,16 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
-                  {/* <div className="image">
+                  <div className="image">
                     <img src="DISPLAY_PICTURES/002.jpg" alt="aali image" />
                     <div className="main" data-img-url="DISPLAY_PICTURES/002.jpg" />
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   <div className="image">
@@ -50,9 +50,9 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
-                  </div> */}
+                  </div>
                   {/* <div className="details">
                     <span className="category">
                       <a href="#">Web Design</a>
@@ -71,7 +71,7 @@ const Blog = () => {
                       </a>
                     </div>
                   </div> */}
-                  <div className={hidden(1)}>
+                  {/* <div className={hidden(1)}>
                     <ModalBox close={setModal}>
                       <div className="news_popup_informations">
                         <div className="image">
@@ -92,7 +92,7 @@ const Blog = () => {
                           <div className="main" data-img-url="
                           DISPLAY_PICTURES/006.jpg" />
                         </div>
-                        {/* <div className="details">
+                        <div className="details">
                           <span className="category">
                             <a href="#">Development</a>
                           </span>
@@ -127,10 +127,10 @@ const Blog = () => {
                             we can design a custom website that drives sales for
                             your unique business.`}
                           </p>
-                        </div> */}
+                        </div>
                       </div>
                     </ModalBox>
-                  </div>
+                  </div> */}
                 </div>
               </li>
               <li className="wow fadeInRight" data-wow-duration="1s">
@@ -141,7 +141,7 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   <div className="image">
@@ -150,7 +150,7 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   <div className="image">
@@ -159,7 +159,7 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   {/* <div className="details">
@@ -238,7 +238,7 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   <div className="image">
@@ -247,7 +247,7 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   <div className="image">
@@ -256,7 +256,7 @@ const Blog = () => {
                     <a
                       className="aali_tm_full_link"
                       href="#"
-                      onClick={() => setModal(1)}
+                      // onClick={() => setModal(1)}
                     />
                   </div>
                   {/* <div className="details">

@@ -27,7 +27,7 @@ const Index = () => {
       <Skills />
       <Portfolio />
       <Service dark />
-      <Resume />
+      {/* <Resume /> */}
       <Testimonial />
       {/* <Blog /> */}
       <Counter />

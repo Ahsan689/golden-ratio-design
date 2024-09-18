@@ -20,20 +20,79 @@ import Modal from "../components/ModalNew";
 import CloseButton from "./CloseButton";
 
 const images = [
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/001.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/002.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/003.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/004.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/005.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/006.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/007.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/008_1.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/009.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0010.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0011.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0012.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0013.png",
-  "SAUDI ARABIA LIVING ROOM RENDERS/New folder/0014.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/001.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/002.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/003.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/004.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/005.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/006.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/007.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/008_1.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/009.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0010.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0011.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0012.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0013.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0014.png",
+];
+const ADEEL_KITCHEN = [
+  "ADEEL KITCHEN WITH DINING RENDERS/06.png",
+  "ADEEL KITCHEN WITH DINING RENDERS/07.png",
+  "ADEEL KITCHEN WITH DINING RENDERS/08.png",
+  "ADEEL KITCHEN WITH DINING RENDERS/11.png",
+  "ADEEL KITCHEN WITH DINING RENDERS/14.jpg",
+  "ADEEL KITCHEN WITH DINING RENDERS/15.jpg",
+];
+const AMIN_LAKHANI_DINING_RENDERS = [
+  "AMIN LAKHANI DINING RENDERS/03.jpg",
+  "AMIN LAKHANI DINING RENDERS/04.jpg",
+  "AMIN LAKHANI DINING RENDERS/05.jpg",
+  "AMIN LAKHANI DINING RENDERS/06.jpg",
+  "AMIN LAKHANI DINING RENDERS/07.jpg",
+  "AMIN LAKHANI DINING RENDERS/08.jpg",
+  "AMIN LAKHANI DINING RENDERS/09.jpg",
+  "AMIN LAKHANI DINING RENDERS/10.jpg",
+  "AMIN LAKHANI DINING RENDERS/11.jpg",
+  "AMIN LAKHANI DINING RENDERS/12.jpg",
+];
+const AMIN_LAKHANI_DRAWING_RENDERS = [
+  "AMIN LAKHANI DRAWING RENDERS/02.jpg",
+  "AMIN LAKHANI DRAWING RENDERS/03.jpg",
+  "AMIN LAKHANI DRAWING RENDERS/04.jpg",
+  "AMIN LAKHANI DRAWING RENDERS/07.jpg",
+  "AMIN LAKHANI DRAWING RENDERS/08.jpg",
+  "AMIN LAKHANI DRAWING RENDERS/09.jpg",
+];
+const AMIN_LAKLHANI_KITCHEN_1_RENDERS = [
+  "AMIN LAKLHANI KITCHEN 1 RENDERS/002.jpg",
+  "AMIN LAKLHANI KITCHEN 1 RENDERS/003.jpg",
+  "AMIN LAKLHANI KITCHEN 1 RENDERS/004.jpg",
+  "AMIN LAKLHANI KITCHEN 1 RENDERS/005.jpg",
+  "AMIN LAKLHANI KITCHEN 1 RENDERS/007.jpg",
+];
+const CONF_ROOM_SGS_RENDERS = [
+  "CONF ROOM SGS RENDERS/01.jpg",
+  "CONF ROOM SGS RENDERS/02.jpg",
+  "CONF ROOM SGS RENDERS/03.jpg",
+  "CONF ROOM SGS RENDERS/04.jpg",
+  "CONF ROOM SGS RENDERS/05.jpg",
+  "CONF ROOM SGS RENDERS/06.jpg",
+  "CONF ROOM SGS RENDERS/07.jpg",
+  "CONF ROOM SGS RENDERS/08.jpg",
+  "CONF ROOM SGS RENDERS/09.jpg",
+  "CONF ROOM SGS RENDERS/10.jpg",
+];
+const MD_ROOM_SGS_RENDERS = [
+  "MD ROOM SGS RENDERS/01.png",
+  "MD ROOM SGS RENDERS/02.png",
+  "MD ROOM SGS RENDERS/03.png",
+  "MD ROOM SGS RENDERS/04.png",
+  "MD ROOM SGS RENDERS/05.png",
+  "MD ROOM SGS RENDERS/06.png",
+  "MD ROOM SGS RENDERS/07.png",
+  "MD ROOM SGS RENDERS/08.png",
+  "MD ROOM SGS RENDERS/09.png",
+  "MD ROOM SGS RENDERS/10.png",
 ];
 
 const Portfolio = () => {
@@ -151,12 +210,12 @@ const Portfolio = () => {
             <h3>Check my portfolio</h3>
           </div>
           <div className="portfolio_filter">
-            <ul>
-              {/* <li>
+            {/* <ul>
+              <li>
                 <a onClick={()=> handleFilterKeyChange("*")} className="current">
                   All
                 </a>
-              </li> */}
+              </li>
               <li>
                 <a className="current" onClick={()=>handleFilterKeyChange("residential")} style={{color:filterKey==="residential"?'yellow':""}}>Residential</a>
               </li>
@@ -166,13 +225,13 @@ const Portfolio = () => {
               <li>
                 <a onClick={()=>handleFilterKeyChange("commercial")}style={{color:filterKey==="commercial"?'yellow':""}}>Commercial</a>
               </li>
-              {/* <li>
+              <li>
                 <a onClick={handleFilterKeyChange("image")}>Image</a>
               </li>
               <li>
                 <a onClick={handleFilterKeyChange("detail")}>Detail</a>
-              </li> */}
-            </ul>
+              </li>
+            </ul> */}
           </div>
 
           <div className="portfolio_list">
@@ -207,15 +266,12 @@ const Portfolio = () => {
             ))} */}
               <li className="filter-item residential">
                 <div className="list_inner">
-                  <div className="image">
-                    <video
-                      src="videos/RESIDENTIAL CARD BACK ANIMATION VIDEO.mp4"
-                      style={{ width: "100%", height: "285px" }}
-                      autoPlay
-                      muted
-                      loop
-                    />
-                  </div>
+                  {/* <div className="image">
+                  
+                  </div> */}
+                    <img src="SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/003.png" alt="aali image" style={{width:"100%", height:"350px"}} />
+                  {/* <img src="SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/003.png" width={200} height={200}/> */}
+
                   <div className="overlay" />
                   <div className="details">
                     <h3>Residential</h3>
@@ -260,7 +316,7 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <div className="service_popup_informations">
-                      <Carousel images={images} />
+                      <Carousel images={ADEEL_KITCHEN} />
                       {/* <div className="image">
                         <img src="img/thumbs/4-2.jpg" alt="" />
                         <div
@@ -286,7 +342,42 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <div className="service_popup_informations">
-                      <Carousel images={images} />
+                      <Carousel images={AMIN_LAKHANI_DINING_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                        <p>
+                          In today’s digital world, your website is the first
+                          interaction consumers have with your business.{" "}
+                          {`That's`}
+                          why almost 95 percent of a user’s first impression
+                          relates to web design. It’s also why web design
+                          services can have an immense impact on your company’s
+                          bottom line.
+                        </p>
+                     
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={AMIN_LAKHANI_DRAWING_RENDERS} />
                       {/* <div className="image">
                         <img src="img/thumbs/4-2.jpg" alt="" />
                         <div
@@ -346,8 +437,8 @@ const Portfolio = () => {
 
                 
                 </div>
-              </li>
-              <li className="filter-item residential">
+              </li> */}
+              {/* <li className="filter-item residential">
                 <div className="list_inner">
                   <div className="image">
                     <video
@@ -371,10 +462,10 @@ const Portfolio = () => {
 
                   
                 </div>
-              </li>
+              </li> */}
               <li className="filter-item interior">
                 <div className="list_inner">
-                  <div className="image">
+                  {/* <div className="image">
                     <video
                       src="videos/INTERIOR BACK CARD ANIMATION.mp4"
                       style={{ width: "100%", height: "285px" }}
@@ -382,22 +473,149 @@ const Portfolio = () => {
                       muted
                       loop
                     />
-                  </div>
+                  </div> */}
+                   <img src="CONF ROOM SGS RENDERS/09.jpg" alt="aali image" style={{width:"100%", height:"350px"}} />
                   <div className="overlay" />
                   <div className="details">
                     <h3>Interior</h3>
                     <h6>Ariel View Appartment</h6>
                   </div>
                   <a
-                    className="aali_tm_full_link popup-youtube"
-                    href="#"
-                    onClick={() => showPopup("youtube", "7e90gBu4pas")}
+                    className="aali_tm_full_link "
+                    // href="#"
+                    onClick={() => setModal(2)}
                   />
                 </div>
               </li>
+              <div className={modal === 2 ? "" : "hidden_content"}>
+                  <ModalBox close={setModal}>
+                    <div className="service_popup_informations">
+                      <Carousel images={AMIN_LAKLHANI_KITCHEN_1_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                       
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={ADEEL_KITCHEN} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                      
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={AMIN_LAKHANI_DINING_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                        <p>
+                          In today’s digital world, your website is the first
+                          interaction consumers have with your business.{" "}
+                          {`That's`}
+                          why almost 95 percent of a user’s first impression
+                          relates to web design. It’s also why web design
+                          services can have an immense impact on your company’s
+                          bottom line.
+                        </p>
+                     
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={AMIN_LAKHANI_DRAWING_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                        <p>
+                          In today’s digital world, your website is the first
+                          interaction consumers have with your business.{" "}
+                          {`That's`}
+                          why almost 95 percent of a user’s first impression
+                          relates to web design. It’s also why web design
+                          services can have an immense impact on your company’s
+                          bottom line.
+                        </p>
+                     
+                      </div>
+                    </div>
+                  </ModalBox>
+                </div>
               <li className="filter-item commercial">
                 <div className="list_inner">
-                  <div className="image">
+                  {/* <div className="image">
                     <video
                       src="videos/INTERIOR CARD BACK ANIMATION VIDEO.mp4"
                       style={{ width: "100%", height: "285px" }}
@@ -406,19 +624,146 @@ const Portfolio = () => {
                       loop
                     />
 
-                  </div>
+                  </div> */}
+                   <img src="AMIN LAKLHANI KITCHEN 1 RENDERS/002.jpg" alt="aali image" style={{width:"100%", height:"350px"}} />
                   <div className="overlay" />
                   <div className="details">
                     <h3>Commercial</h3>
                     <h6>Lavish Restaurant</h6>
                   </div>
                   <a
-                    className="aali_tm_full_link soundcloude_link"
-                    href="#"
-                    // onClick={() => showPopup("soundcloud", "471954807")}
+                    className="aali_tm_full_link"
+                    // href="#"
+                    onClick={() => setModal(3)}
                   />
                 </div>
-              </li> */}
+              </li>
+              <div className={modal === 3 ? "" : "hidden_content"}>
+                  <ModalBox close={setModal}>
+                    <div className="service_popup_informations">
+                      <Carousel images={MD_ROOM_SGS_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                       
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={ADEEL_KITCHEN} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                      
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={AMIN_LAKHANI_DINING_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                        <p>
+                          In today’s digital world, your website is the first
+                          interaction consumers have with your business.{" "}
+                          {`That's`}
+                          why almost 95 percent of a user’s first impression
+                          relates to web design. It’s also why web design
+                          services can have an immense impact on your company’s
+                          bottom line.
+                        </p>
+                     
+                      </div>
+                    </div>
+                    <div className="service_popup_informations">
+                      <Carousel images={AMIN_LAKHANI_DRAWING_RENDERS} />
+                      {/* <div className="image">
+                        <img src="img/thumbs/4-2.jpg" alt="" />
+                        <div
+                          className="main"
+                          data-img-url="img/service/1.jpg"
+                        />
+                      </div> */}
+                      <div className="main_title">
+                        <h3>Video Production</h3>
+                        <span className="price">
+                          Starts from <span>$49</span>
+                        </span>
+                      </div>
+                      <div className="descriptions">
+                        <p>
+                          Aali is a leading web design agency with an
+                          award-winning design team that creates innovative,
+                          effective websites that capture your brand, improve
+                          your conversion rates, and maximize your revenue to
+                          help grow your business and achieve your goals.
+                        </p>
+                        <p>
+                          In today’s digital world, your website is the first
+                          interaction consumers have with your business.{" "}
+                          {`That's`}
+                          why almost 95 percent of a user’s first impression
+                          relates to web design. It’s also why web design
+                          services can have an immense impact on your company’s
+                          bottom line.
+                        </p>
+                     
+                      </div>
+                    </div>
+                  </ModalBox>
+                </div>
 
               {/* <li className="filter-item detail">
                 <div className="list_inner">
