@@ -84,9 +84,12 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            {/* <div className="right wow fadeInRight" data-wow-duration="1s">
+            <div className="right wow fadeInRight" data-wow-duration="1s">
               <div className="fields">
-                <form
+
+                
+                
+                {/* <form
                   action="/"
                   method="post"
                   className="contact_form"
@@ -142,9 +145,9 @@ const Contact = () => {
                       <span>Submit Message {msgSent}</span>
                     </a>
                   </div>
-                </form>
+                </form> */}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         <span
