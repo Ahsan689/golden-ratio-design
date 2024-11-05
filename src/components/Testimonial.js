@@ -1,6 +1,8 @@
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Pagination, Navigation]);
+
+
 const Testimonial = () => {
   const props = {
     slidesPerView: 1,
@@ -16,7 +18,7 @@ const Testimonial = () => {
       <div className="aali_tm_testimonials">
         <div className="left">
           <div className="image">
-            <img src="img/hero/2.png" alt="aali image" />
+            <img src="SAUDI_ARABIA_LIVING_ROOM_RENDERS/005.png" alt="aali image"  height={"590px"} style={{borderRadius:"30px"}}/>
           </div>
         </div>
         <div className="right">

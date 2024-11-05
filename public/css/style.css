@@ -934,7 +934,7 @@ h6 { font-size: 16px; }
 	z-index: 1;
 }
 .aali_tm_about .right .square{
-	width: 1000px;
+	width: 283px;
 	height: 390px;
 	background-color: #ea4343;
 	position: absolute;
@@ -1176,8 +1176,8 @@ h6 { font-size: 16px; }
 	left: 0px;
 	right: 0px;
 	z-index: 1;
-	background-color: rgba(234,67,67,.72);
-	border-radius: 10px;
+	background-color: rgb(0 0 0 / 53%);
+	border-radius: 18px;
 	opacity: 0;
 	visibility: hidden;
 	
@@ -2293,7 +2293,7 @@ h6 { font-size: 16px; }
 .aali_tm_counter .border{
 	position: absolute;
 	right: 0px;
-	width: 1000pc;
+	width: 19pc;
 	height: 520px;
 	border: 6px solid #fff;
 	left: 100%;
@@ -2965,7 +2965,7 @@ body.intro .loader_line:after{
 	.aali_tm_about .border{height: 200px;margin-right: -30px;}
 	.aali_tm_about .square{width: 200px;height: 200px;}
 	.aali_tm_about .left .image{margin-left: 120px;}
-	.aali_tm_about .right .square{height: 260px;margin-left: -80px;top: -60px;}
+	.aali_tm_about .right .square{height: 260px;margin-left: -150px;top: -60px;}
 	.aali_tm_about .right{top: 240px;}
 	.aali_tm_about .center{padding: 0px 50px 0px 80px;}
 	.aali_tm_main_title{max-width: 500px;}
@@ -3004,14 +3004,14 @@ body.intro .loader_line:after{
 	.aali_tm_testimonials .border{height: 350px;margin-right: -250px;}
 	.aali_tm_testimonials .quote i{font-size: 60px;}
 	.aali_tm_testimonials .quote{width: 150px;height: 210px;}
-	.aali_tm_testimonials .square{bottom: -60px;width: 130px;height: 130px;}
+	.aali_tm_testimonials .square{  bottom:-20px;width: 130px;height: 125px;}
 	.aali_tm_news .news_list ul li .details .title a{font-size: 25px;}
 	.aali_tm_news .news_list ul li .details .title{margin-bottom: 8px;}
 	.aali_tm_learn_more a{padding: 10px 35px;}
 	.aali_tm_counter .counter_list .value span{font-size: 60px;}
 	.aali_tm_counter .counter_list .value .big{font-size: 60px;}
 	.aali_tm_counter .counter_list .wrapper .text h3{font-size: 25px;}
-	.aali_tm_counter .border{margin-left: -60px;}
+	.aali_tm_counter .border{margin-left: -238px;}
 	.aali_tm_contact .square{width: 100px;height: 80px;}
 	.aali_tm_contact .left ul li h3{font-size: 25px;}
 	.aali_tm_copyright .square{width: 70px;height: 130px;top: -65px;right: 20px;}
@@ -3095,10 +3095,10 @@ body.intro .loader_line:after{
 	.aali_tm_hero .cd-headline{font-size: 20px;}
 	.aali_tm_hero .cd-headline b{font-size: 30px;}
 	.aali_tm_hero .simple_button{margin-left: 20px;}
-	.aali_tm_about{padding: 135px 0px;}
+	.aali_tm_about{padding: 0px 0px;}
 	.aali_tm_about .center h3{font-size: 30px;}
 	.aali_tm_about .center .subtitle{font-size: 20px;}
-	.aali_tm_skills{padding-top: 130px;padding-bottom: 527px;}
+	.aali_tm_skills{padding-top: 15px;padding-bottom: 527px;}
 	.aali_tm_portfolio .portfolio_list ul{margin: 0px;}
 	.aali_tm_portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
 	.aali_tm_portfolio .portfolio_list .svg{width: 30px;height: 30px;}

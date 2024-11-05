@@ -56,13 +56,13 @@ const Contact = () => {
           </div>
           <div className="contact_inner">
             <div className="left wow fadeInLeft" data-wow-duration="1s">
-              <div className="text">
+              {/* <div className="text">
                 <p>
                   Please fill out the form on this section to contact with me.
                   Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through
                   Friday
                 </p>
-              </div>
+              </div> */}
               <ul>
                 <li>
                   <div className="list_inner">
@@ -84,7 +84,7 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            <div className="right wow fadeInRight" data-wow-duration="1s">
+            {/* <div className="right wow fadeInRight" data-wow-duration="1s">
               <div className="fields">
                 <form
                   action="/"
@@ -144,7 +144,7 @@ const Contact = () => {
                   </div>
                 </form>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <span

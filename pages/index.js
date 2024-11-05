@@ -20,7 +20,7 @@ const Index = () => {
     document.querySelector("body").classList.add("dark");
   }, []);
   return (
-    <Layout dark>
+    <Layout headName={"Golden Ratio Design"} dark>
       <Home />
       <Blog />
       <About />

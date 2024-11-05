@@ -20,20 +20,20 @@ import Modal from "../components/ModalNew";
 import CloseButton from "./CloseButton";
 
 const images = [
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/001.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/002.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/003.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/004.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/005.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/006.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/007.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/008_1.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/009.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0010.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0011.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0012.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0013.png",
-  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/0014.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/001.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/002.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/003.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/004.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/005.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/006.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/007.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/008_1.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/009.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/0010.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/0011.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/0012.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/0013.png",
+  "SAUDI_ARABIA_LIVING_ROOM_RENDERS/0014.png",
 ];
 const ADEEL_KITCHEN = [
   "ADEEL KITCHEN WITH DINING RENDERS/06.png",
@@ -92,7 +92,6 @@ const MD_ROOM_SGS_RENDERS = [
   "MD ROOM SGS RENDERS/07.png",
   "MD ROOM SGS RENDERS/08.png",
   "MD ROOM SGS RENDERS/09.png",
-  "MD ROOM SGS RENDERS/10.png",
 ];
 
 const Portfolio = () => {
@@ -269,7 +268,10 @@ const Portfolio = () => {
                   {/* <div className="image">
                   
                   </div> */}
-                    <img src="SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/003.png" alt="aali image" style={{width:"100%", height:"350px"}} />
+                 <div style={{ position: 'relative', width: '100%', height: '350px' }}>
+                  <img src="SAUDI_ARABIA_LIVING_ROOM_RENDERS/003.png" alt="aali image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius:"5%" }} />
+                  {/* <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(211, 211, 211, 0.5)' }} /> */}
+                </div>
                   {/* <img src="SAUDI_ARABIA_LIVING_ROOM_RENDERS/New_folder/003.png" width={200} height={200}/> */}
 
                   <div className="overlay" />
@@ -474,7 +476,10 @@ const Portfolio = () => {
                       loop
                     />
                   </div> */}
-                   <img src="CONF ROOM SGS RENDERS/09.jpg" alt="aali image" style={{width:"100%", height:"350px"}} />
+                <div style={{ position: 'relative', width: '100%', height: '350px' }}>
+                   <img src="CONF ROOM SGS RENDERS/09.jpg" alt="aali image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius:"5%" }}  />
+                  {/* <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(211, 211, 211, 0.5)' }} /> */}
+                </div>
                   <div className="overlay" />
                   <div className="details">
                     <h3>Interior</h3>
@@ -625,7 +630,10 @@ const Portfolio = () => {
                     />
 
                   </div> */}
-                   <img src="AMIN LAKLHANI KITCHEN 1 RENDERS/002.jpg" alt="aali image" style={{width:"100%", height:"350px"}} />
+                  <div style={{ position: 'relative', width: '100%', height: '350px' }}>
+
+                   <img src="AMIN LAKLHANI KITCHEN 1 RENDERS/002.jpg" alt="aali image" style={{width:"100%", height:"350px",objectFit: 'cover', borderRadius:"5%" }} />
+                  </div>
                   <div className="overlay" />
                   <div className="details">
                     <h3>Commercial</h3>

@@ -34,7 +34,7 @@ const Layout = ({ children, headName, dark }) => {
   return (
     <Fragment>
       <Head>
-        <title>Aali | {headName ? headName : "Home"} </title>
+        <title>{headName ? headName : "Home"} </title>
       </Head>
       
       <Preloader />

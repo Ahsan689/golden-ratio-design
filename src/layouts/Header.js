@@ -51,7 +51,7 @@ const Header = ({ dark }) => {
                 <a href="#about"><MdGroups/></a>
               </li>
               <li>
-                <a href="/portfolio"><BsFolder2Open/></a>
+                <a href="#portfolio"><BsFolder2Open/></a>
               </li>
               <li>
                 <a href="#service"><MdMiscellaneousServices/></a>
