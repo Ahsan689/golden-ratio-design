@@ -441,7 +441,7 @@ h6 { font-size: 16px; }
 	color: #ea4343;
 }
 .aali_tm_header .menu ul li.current a{
-	color: #ea4343;
+	color: #ead743;
 }
 .aali_tm_header.animate .menu ul li.current a{
 	color: #ea4343;
@@ -839,7 +839,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 270px;
 	height: 270px;
-	background-color: #ea4343;
+	background-color: #bdaf00;
 	bottom: -80px;
 	left: -65px;
 	z-index: 0;
@@ -873,7 +873,7 @@ h6 { font-size: 16px; }
 	font-family: "Josefin Sans";
 	font-size: 24px;
 	font-weight: 700;
-	color: #ea4343;
+	color: #bdaf00;
 	letter-spacing: -.2px;
 	display: inline-block;
 	margin-bottom: 6px;
@@ -884,7 +884,7 @@ h6 { font-size: 16px; }
 	letter-spacing: -.2px;
 }
 .aali_tm_about .center h3 span{
-	color: #ea4343;
+	color: #bdaf00;
 }
 .aali_tm_about .center .subtitle{
 	font-family: "Josefin Sans";
@@ -936,7 +936,7 @@ h6 { font-size: 16px; }
 .aali_tm_about .right .square{
 	width: 283px;
 	height: 390px;
-	background-color: #ea4343;
+	background-color: #bdaf00;
 	position: absolute;
 	left: 100%;
 	margin-left: -200px;
@@ -952,7 +952,7 @@ h6 { font-size: 16px; }
 	height: auto;
 	clear: both;
 	float: left;
-	background-color: #ba3c3c;
+	background-color: #bdaf00;
 	padding: 160px 0px 557px 0px;
 	position: relative;
 }
@@ -1524,7 +1524,8 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 157px;
 	height: 227px;
-	background-color: #ea4343;
+	/* background-color: #ea4343; */
+	background-color: #bdaf00;
 	top: 35px;
 	right: 0px;
 }
@@ -1866,7 +1867,8 @@ h6 { font-size: 16px; }
 	float: left;
 	position: relative;
 	display: flex;
-	background-color: #ba3c3c;
+	/* background-color: #ba3c3c; */
+	background-color: #bdaf00;
 	padding: 160px 0px 155px 0px;
 }
 .aali_tm_testimonials .left{
@@ -2226,7 +2228,8 @@ h6 { font-size: 16px; }
 	height: auto;
 	clear: both;
 	float: left;
-	background-color: #ba3c3c;
+	/* background-color: #ba3c3c; */
+	background-color: #bdaf00;
 	padding: 125px 0px 107px 0px;
 	position: relative;
 }
@@ -2310,7 +2313,8 @@ h6 { font-size: 16px; }
 	height: auto;
 	clear: both;
 	float: left;
-	padding: 150px 0px 170px 0px;
+	/* padding: 150px 0px 170px 0px; */
+	padding: 130px 0px 0px 0px;
 	position: relative;
 }
 .aali_tm_contact .contact_inner{
@@ -2601,7 +2605,7 @@ input[type=number] {
 	position: absolute;
 	width: 320px;
 	height: 300px;
-	border: 6px solid #fff;
+	border: 6px solid #bdaf00;
 	top: -200px;
 	left: -45px;
 }
@@ -2611,7 +2615,7 @@ input[type=number] {
 	height: 143px;
 	top: -77px;
 	right: 60px;
-	background-color: #ea4343;
+	background-color: #bdaf00;
 }
 .line_anim{
 	display: inline-block;

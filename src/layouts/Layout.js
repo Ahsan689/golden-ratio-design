@@ -29,7 +29,7 @@ const Layout = ({ children, headName, dark }) => {
     aTagClick();
 
   });
- 
+  
   
   return (
     <Fragment>
@@ -61,7 +61,7 @@ const Layout = ({ children, headName, dark }) => {
         </div> */}
         <Header dark={dark} />
         {children}
-        <Footer />
+        {/* <Footer /> */}
         <Cursor />
       </div>
     </Fragment>
